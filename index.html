@@ -19,7 +19,24 @@
       p {
         font-size: 20px;
       }
-    </style>
+      /* When the value is 0 then px is optional */
+      .nav-link {
+        border: 0 !important;
+      }
+      .nav-item { 
+        border: 0 !important;
+      }
+      .nav-tabs {
+        border: 0 !important;
+        display: flex;
+    flex-direction: column;
+      }
+      /* Here is how you target input type */
+      input[type="radio"]{
+        border: 2px solid gray;
+      }
+
+</style>
   </head>
   <body>
     <div class="container-fluid">
@@ -101,141 +118,489 @@
           </div>
         </div>
       </div>
+      
+      <div class="card mt-2">
+        <div class="card-body roundedz shadow-sm">
       <div class="row mt-2">
-        <div class="col-12 p-0">
-          <div class="card">
-            <div class="card-body roundedz shadow-sm">
-              <div class="container">
+
+        <div class="col-2 p-0">
+          <div class="container-fuild">
+            <div class="row">
+              <div class="col-12">
+                <h5 style="    margin-bottom: 12px;
+                padding: 5px 12px;
+                border-radius: 6px;
+                color: #675b5b;" class="border-bottom">Filter By</h5>
+
+              </div>
+              <span class="filtersection">
+                <h6>Product Catergory</h6>
+<!-- Bootstrap tab navigation -->
+
+<ul class="nav nav-tabs" id="categoryTabs" role="tablist">
+
+  <!-- Female button starts -->
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="male-tab" data-bs-toggle="tab" data-bs-target="#female" type="button" role="tab" aria-controls="female" aria-selected="true">
+      <div class="form-check">
+      <label for="female">Female</label>
+<!-- checked attribute is used to check the radio by default -->
+        <input checked class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  
+      </div>
+    </button>
+  </li>
+  <!-- Female button ends -->
+
+  <!-- Male button starts -->
+
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="female-tab" data-bs-toggle="tab" data-bs-target="#male" type="button" role="tab" aria-controls="male" aria-selected="false"><div class="form-check">
+      <label for="male">Male</label>
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+
+    </div></button>
+  </li>
+
+  <!-- Male button ends -->
+
+  <!-- Kids button starts -->
+
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="kids-tab" data-bs-toggle="tab" data-bs-target="#kids" type="button" role="tab" aria-controls="kids" aria-selected="false">
+      <div class="form-check">
+      <label for="kids">Kids</label>
+
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  
+      </div>
+    </button>
+  </li>
+
+  <!-- Kids button ends -->
+
+</ul>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="col-9 p-0">
+
+              <div class="container-fuild">
                 <div class="row">
-                  <div class="col-12">
-                    <h1 style="    margin-bottom: 12px;
-                    padding: 5px 12px;
-                    background: #adadad1a;
-                    border-radius: 6px;
-                    color: #675b5b;">Products</h1>
-                    <div class="products">
-                      
-                      <div class="row my-3">  
-                        <div class="col-lg-3 col-md-4 col-sm-6 my-2"><div class="card" style="width: 100%;">
-                          <img src="https://images.pexels.com/photos/985635/pexels-photo-985635.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">Product 1</h5>
-                            <p class="card-text" style="font-size: 16px !important;">This image represents product 1 at London Mall.</p>
-                            <a href="#" class="btn btn-success" style="font-size: 14px !important;
-                            line-height: 25.5px !important;
-                            padding: 5px 15px !important;
-                            background: #19875420;
-                            color: #198754;
-                            font-weight: bold;">Add to cart <i style="    margin-left: 5px;
-    font-size: 12px;" class="fa-solid fa-cart-shopping"></i></a>
-                          </div>
-                        </div></div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 my-2"><div class="card" style="width: 100%;">
-                          <img src="https://images.pexels.com/photos/19219521/pexels-photo-19219521/free-photo-of-elegant-couple-in-front-of-a-white-car.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">Product 1</h5>
-                            <p class="card-text" style="font-size: 16px !important;">This image represents product 1 at London Mall.</p>
-                            <a href="#" class="btn btn-success" style="font-size: 14px !important;
-                            line-height: 25.5px !important;
-                            padding: 5px 15px !important;
-                            background: #19875420;
-                            color: #198754;
-                            font-weight: bold;">Add to cart <i style="    margin-left: 5px;
-    font-size: 12px;" class="fa-solid fa-cart-shopping"></i></a>
-                          </div>
-                        </div></div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 my-2"><div class="card" style="width: 100%;">
-                          <img src="https://images.pexels.com/photos/985635/pexels-photo-985635.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">Product 1</h5>
-                            <p class="card-text" style="font-size: 16px !important;">This image represents product 1 at London Mall.</p>
-                            <a href="#" class="btn btn-success" style="font-size: 14px !important;
-                            line-height: 25.5px !important;
-                            padding: 5px 15px !important;
-                            background: #19875420;
-                            color: #198754;
-                            font-weight: bold;">Add to cart <i style="    margin-left: 5px;
-    font-size: 12px;" class="fa-solid fa-cart-shopping"></i></a>
-                          </div>
-                        </div></div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 my-2"><div class="card" style="width: 100%;">
-                          <img src="https://images.pexels.com/photos/985635/pexels-photo-985635.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">Product 1</h5>
-                            <p class="card-text" style="font-size: 16px !important;">This image represents product 1 at London Mall.</p>
-                            <a href="#" class="btn btn-success" style="font-size: 14px !important;
-                            line-height: 25.5px !important;
-                            padding: 5px 15px !important;
-                            background: #19875420;
-                            color: #198754;
-                            font-weight: bold;">Add to cart <i style="    margin-left: 5px;
-    font-size: 12px;" class="fa-solid fa-cart-shopping"></i></a>
-                          </div>
-                        </div></div>
 
-                      </div>
-                      <div class="row my-3">  
-                        <div class="col-lg-3 col-md-4 col-sm-6 my-2"><div class="card" style="width: 100%;">
-                          <img src="https://images.pexels.com/photos/985635/pexels-photo-985635.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">Product 1</h5>
-                            <p class="card-text" style="font-size: 16px !important;">This image represents product 1 at London Mall.</p>
-                            <a href="#" class="btn btn-success" style="font-size: 14px !important;
-                            line-height: 25.5px !important;
-                            padding: 5px 15px !important;
-                            background: #19875420;
-                            color: #198754;
-                            font-weight: bold;">Add to cart <i style="    margin-left: 5px;
-    font-size: 12px;" class="fa-solid fa-cart-shopping"></i></a>
-                          </div>
-                        </div></div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 my-2"><div class="card" style="width: 100%;">
-                          <img src="https://images.pexels.com/photos/1488507/pexels-photo-1488507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">Product 1</h5>
-                            <p class="card-text" style="font-size: 16px !important;">This image represents product 1 at London Mall.</p>
-                            <a href="#" class="btn btn-success" style="font-size: 14px !important;
-                            line-height: 25.5px !important;
-                            padding: 5px 15px !important;
-                            background: #19875420;
-                            color: #198754;
-                            font-weight: bold;">Add to cart <i style="    margin-left: 5px;
-    font-size: 12px;" class="fa-solid fa-cart-shopping"></i></a>
-                          </div>
-                        </div></div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 my-2"><div class="card" style="width: 100%;">
-                          <img src="https://images.pexels.com/photos/985635/pexels-photo-985635.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">Product 1</h5>
-                            <p class="card-text" style="font-size: 16px !important;">This image represents product 1 at London Mall.</p>
-                            <a href="#" class="btn btn-success" style="font-size: 14px !important;
-                            line-height: 25.5px !important;
-                            padding: 5px 15px !important;
-                            background: #19875420;
-                            color: #198754;
-                            font-weight: bold;">Add to cart <i style="    margin-left: 5px;
-    font-size: 12px;" class="fa-solid fa-cart-shopping"></i></a>
-                          </div>
-                        </div></div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 my-2"><div class="card" style="width: 100%;">
-                          <img src="https://images.pexels.com/photos/985635/pexels-photo-985635.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">Product 1</h5>
-                            <p class="card-text" style="font-size: 16px !important;">This image represents product 1 at London Mall.</p>
-                            <a href="#" class="btn btn-success" style="font-size: 14px !important;
-                            line-height: 25.5px !important;
-                            padding: 5px 15px !important;
-                            background: #19875420;
-                            color: #198754;
-                            font-weight: bold;">Add to cart <i style="    margin-left: 5px;
-    font-size: 12px;" class="fa-solid fa-cart-shopping"></i></a>
-                          </div>
-                        </div></div>
 
-                      </div>
 
-                    </div>
-                  </div>
+                   <!-- Bootstrap tab content -->
+    <div class="tab-content" id="categoryTabsContent">
+
+      <!-- Male portion starts -->
+      <div class="tab-pane fade show active" id="male" role="tabpanel" aria-labelledby="male-tab">
+        <div class="col-12">
+          <h1 style="    margin-bottom: 12px;
+          padding: 5px 12px;
+          background: #adadad1a;
+          border-radius: 6px;
+          color: #675b5b;">Products</h1>
+          <div class="products">
+            
+            <div class="row my-3">  
+              <div class="col-lg-3 col-md-4 col-sm-6 my-2"><div class="card" style="width: 100%;">
+                <img src="https://images.pexels.com/photos/19219514/pexels-photo-19219514/free-photo-of-elegant-couple-posing-by-a-white-rolls-royce-phantom-car.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Product 1</h5>
+                  <p class="card-text" style="font-size: 16px !important;">This image represents product 1 at London Mall.</p>
+                  <a href="#" class="btn btn-success" style="font-size: 14px !important;
+                  line-height: 25.5px !important;
+                  padding: 5px 15px !important;
+                  background: #19875420;
+                  color: #198754;
+                  font-weight: bold;">Add to cart <i style="    margin-left: 5px;
+font-size: 12px;" class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div></div>
+              <div class="col-lg-3 col-md-4 col-sm-6 my-2"><div class="card" style="width: 100%;">
+                <img src="https://images.pexels.com/photos/19136159/pexels-photo-19136159/free-photo-of-woman-sitting-inside-a-rolls-royce-and-man-in-a-suit-standing-by-the-door.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Product 1</h5>
+                  <p class="card-text" style="font-size: 16px !important;">This image represents product 1 at London Mall.</p>
+                  <a href="#" class="btn btn-success" style="font-size: 14px !important;
+                  line-height: 25.5px !important;
+                  padding: 5px 15px !important;
+                  background: #19875420;
+                  color: #198754;
+                  font-weight: bold;">Add to cart <i style="    margin-left: 5px;
+font-size: 12px;" class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div></div>
+              <div class="col-lg-3 col-md-4 col-sm-6 my-2"><div class="card" style="width: 100%;">
+                <img src="https://images.pexels.com/photos/985635/pexels-photo-985635.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Product 1</h5>
+                  <p class="card-text" style="font-size: 16px !important;">This image represents product 1 at London Mall.</p>
+                  <a href="#" class="btn btn-success" style="font-size: 14px !important;
+                  line-height: 25.5px !important;
+                  padding: 5px 15px !important;
+                  background: #19875420;
+                  color: #198754;
+                  font-weight: bold;">Add to cart <i style="    margin-left: 5px;
+font-size: 12px;" class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div></div>
+              <div class="col-lg-3 col-md-4 col-sm-6 my-2"><div class="card" style="width: 100%;">
+                <img src="https://images.pexels.com/photos/985635/pexels-photo-985635.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Product 1</h5>
+                  <p class="card-text" style="font-size: 16px !important;">This image represents product 1 at London Mall.</p>
+                  <a href="#" class="btn btn-success" style="font-size: 14px !important;
+                  line-height: 25.5px !important;
+                  padding: 5px 15px !important;
+                  background: #19875420;
+                  color: #198754;
+                  font-weight: bold;">Add to cart <i style="    margin-left: 5px;
+font-size: 12px;" class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div></div>
+
+            </div>
+            <div class="row my-3">  
+              <div class="col-lg-3 col-md-4 col-sm-6 my-2"><div class="card" style="width: 100%;">
+                <img src="https://images.pexels.com/photos/985635/pexels-photo-985635.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Product 1</h5>
+                  <p class="card-text" style="font-size: 16px !important;">This image represents product 1 at London Mall.</p>
+                  <a href="#" class="btn btn-success" style="font-size: 14px !important;
+                  line-height: 25.5px !important;
+                  padding: 5px 15px !important;
+                  background: #19875420;
+                  color: #198754;
+                  font-weight: bold;">Add to cart <i style="    margin-left: 5px;
+font-size: 12px;" class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div></div>
+              <div class="col-lg-3 col-md-4 col-sm-6 my-2"><div class="card" style="width: 100%;">
+                <img src="https://images.pexels.com/photos/1488507/pexels-photo-1488507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Product 1</h5>
+                  <p class="card-text" style="font-size: 16px !important;">This image represents product 1 at London Mall.</p>
+                  <a href="#" class="btn btn-success" style="font-size: 14px !important;
+                  line-height: 25.5px !important;
+                  padding: 5px 15px !important;
+                  background: #19875420;
+                  color: #198754;
+                  font-weight: bold;">Add to cart <i style="    margin-left: 5px;
+font-size: 12px;" class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div></div>
+              <div class="col-lg-3 col-md-4 col-sm-6 my-2"><div class="card" style="width: 100%;">
+                <img src="https://images.pexels.com/photos/985635/pexels-photo-985635.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Product 1</h5>
+                  <p class="card-text" style="font-size: 16px !important;">This image represents product 1 at London Mall.</p>
+                  <a href="#" class="btn btn-success" style="font-size: 14px !important;
+                  line-height: 25.5px !important;
+                  padding: 5px 15px !important;
+                  background: #19875420;
+                  color: #198754;
+                  font-weight: bold;">Add to cart <i style="    margin-left: 5px;
+font-size: 12px;" class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div></div>
+              <div class="col-lg-3 col-md-4 col-sm-6 my-2"><div class="card" style="width: 100%;">
+                <img src="https://images.pexels.com/photos/985635/pexels-photo-985635.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Product 1</h5>
+                  <p class="card-text" style="font-size: 16px !important;">This image represents product 1 at London Mall.</p>
+                  <a href="#" class="btn btn-success" style="font-size: 14px !important;
+                  line-height: 25.5px !important;
+                  padding: 5px 15px !important;
+                  background: #19875420;
+                  color: #198754;
+                  font-weight: bold;">Add to cart <i style="    margin-left: 5px;
+font-size: 12px;" class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div></div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- Male portion ends -->
+
+      <!-- Female Portion Starts -->
+      <div class="tab-pane fade" id="female" role="tabpanel" aria-labelledby="female-tab">
+        <div class="col-12">
+          <h1 style="    margin-bottom: 12px;
+          padding: 5px 12px;
+          background: #adadad1a;
+          border-radius: 6px;
+          color: #675b5b;">Products</h1>
+          <div class="products">
+            
+
+
+            <div class="row my-3">  
+              <div class="col-lg-3 col-md-4 col-sm-6 my-2"><div class="card" style="width: 100%;">
+                <img src="https://images.pexels.com/photos/985635/pexels-photo-985635.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Product 1</h5>
+                  <p class="card-text" style="font-size: 16px !important;">This image represents product 1 at London Mall.</p>
+                  <a href="#" class="btn btn-success" style="font-size: 14px !important;
+                  line-height: 25.5px !important;
+                  padding: 5px 15px !important;
+                  background: #19875420;
+                  color: #198754;
+                  font-weight: bold;">Add to cart <i style="    margin-left: 5px;
+font-size: 12px;" class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div></div>
+              <div class="col-lg-3 col-md-4 col-sm-6 my-2"><div class="card" style="width: 100%;">
+                <img src="https://images.pexels.com/photos/19219521/pexels-photo-19219521/free-photo-of-elegant-couple-in-front-of-a-white-car.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Product 1</h5>
+                  <p class="card-text" style="font-size: 16px !important;">This image represents product 1 at London Mall.</p>
+                  <a href="#" class="btn btn-success" style="font-size: 14px !important;
+                  line-height: 25.5px !important;
+                  padding: 5px 15px !important;
+                  background: #19875420;
+                  color: #198754;
+                  font-weight: bold;">Add to cart <i style="    margin-left: 5px;
+font-size: 12px;" class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div></div>
+              <div class="col-lg-3 col-md-4 col-sm-6 my-2"><div class="card" style="width: 100%;">
+                <img src="https://images.pexels.com/photos/985635/pexels-photo-985635.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Product 1</h5>
+                  <p class="card-text" style="font-size: 16px !important;">This image represents product 1 at London Mall.</p>
+                  <a href="#" class="btn btn-success" style="font-size: 14px !important;
+                  line-height: 25.5px !important;
+                  padding: 5px 15px !important;
+                  background: #19875420;
+                  color: #198754;
+                  font-weight: bold;">Add to cart <i style="    margin-left: 5px;
+font-size: 12px;" class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div></div>
+              <div class="col-lg-3 col-md-4 col-sm-6 my-2"><div class="card" style="width: 100%;">
+                <img src="https://images.pexels.com/photos/985635/pexels-photo-985635.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Product 1</h5>
+                  <p class="card-text" style="font-size: 16px !important;">This image represents product 1 at London Mall.</p>
+                  <a href="#" class="btn btn-success" style="font-size: 14px !important;
+                  line-height: 25.5px !important;
+                  padding: 5px 15px !important;
+                  background: #19875420;
+                  color: #198754;
+                  font-weight: bold;">Add to cart <i style="    margin-left: 5px;
+font-size: 12px;" class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div></div>
+
+            </div>
+            
+            
+            <div class="row my-3">  
+              <div class="col-lg-3 col-md-4 col-sm-6 my-2"><div class="card" style="width: 100%;">
+                <img src="https://images.pexels.com/photos/985635/pexels-photo-985635.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Product 1</h5>
+                  <p class="card-text" style="font-size: 16px !important;">This image represents product 1 at London Mall.</p>
+                  <a href="#" class="btn btn-success" style="font-size: 14px !important;
+                  line-height: 25.5px !important;
+                  padding: 5px 15px !important;
+                  background: #19875420;
+                  color: #198754;
+                  font-weight: bold;">Add to cart <i style="    margin-left: 5px;
+font-size: 12px;" class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div></div>
+              <div class="col-lg-3 col-md-4 col-sm-6 my-2"><div class="card" style="width: 100%;">
+                <img src="https://images.pexels.com/photos/1488507/pexels-photo-1488507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Product 1</h5>
+                  <p class="card-text" style="font-size: 16px !important;">This image represents product 1 at London Mall.</p>
+                  <a href="#" class="btn btn-success" style="font-size: 14px !important;
+                  line-height: 25.5px !important;
+                  padding: 5px 15px !important;
+                  background: #19875420;
+                  color: #198754;
+                  font-weight: bold;">Add to cart <i style="    margin-left: 5px;
+font-size: 12px;" class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div></div>
+              <div class="col-lg-3 col-md-4 col-sm-6 my-2"><div class="card" style="width: 100%;">
+                <img src="https://images.pexels.com/photos/985635/pexels-photo-985635.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Product 1</h5>
+                  <p class="card-text" style="font-size: 16px !important;">This image represents product 1 at London Mall.</p>
+                  <a href="#" class="btn btn-success" style="font-size: 14px !important;
+                  line-height: 25.5px !important;
+                  padding: 5px 15px !important;
+                  background: #19875420;
+                  color: #198754;
+                  font-weight: bold;">Add to cart <i style="    margin-left: 5px;
+font-size: 12px;" class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div></div>
+              <div class="col-lg-3 col-md-4 col-sm-6 my-2"><div class="card" style="width: 100%;">
+                <img src="https://images.pexels.com/photos/985635/pexels-photo-985635.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Product 1</h5>
+                  <p class="card-text" style="font-size: 16px !important;">This image represents product 1 at London Mall.</p>
+                  <a href="#" class="btn btn-success" style="font-size: 14px !important;
+                  line-height: 25.5px !important;
+                  padding: 5px 15px !important;
+                  background: #19875420;
+                  color: #198754;
+                  font-weight: bold;">Add to cart <i style="    margin-left: 5px;
+font-size: 12px;" class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div></div>
+
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+      <!-- Female Portion ends -->
+
+      <!-- Kids portion starts -->
+      <div class="tab-pane fade" id="kids" role="tabpanel" aria-labelledby="kids-tab">
+        <div class="col-12">
+          <h1 style="    margin-bottom: 12px;
+          padding: 5px 12px;
+          background: #adadad1a;
+          border-radius: 6px;
+          color: #675b5b;">Products</h1>
+          <div class="products">
+            
+            <div class="row my-3">  
+              <div class="col-lg-3 col-md-4 col-sm-6 my-2"><div class="card" style="width: 100%;">
+                <img src="https://images.pexels.com/photos/220455/pexels-photo-220455.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Product 1</h5>
+                  <p class="card-text" style="font-size: 16px !important;">This image represents product 1 at London Mall.</p>
+                  <a href="#" class="btn btn-success" style="font-size: 14px !important;
+                  line-height: 25.5px !important;
+                  padding: 5px 15px !important;
+                  background: #19875420;
+                  color: #198754;
+                  font-weight: bold;">Add to cart <i style="    margin-left: 5px;
+font-size: 12px;" class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div></div>
+              <div class="col-lg-3 col-md-4 col-sm-6 my-2"><div class="card" style="width: 100%;">
+                <img src="https://images.pexels.com/photos/1001914/pexels-photo-1001914.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Product 1</h5>
+                  <p class="card-text" style="font-size: 16px !important;">This image represents product 1 at London Mall.</p>
+                  <a href="#" class="btn btn-success" style="font-size: 14px !important;
+                  line-height: 25.5px !important;
+                  padding: 5px 15px !important;
+                  background: #19875420;
+                  color: #198754;
+                  font-weight: bold;">Add to cart <i style="    margin-left: 5px;
+font-size: 12px;" class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div></div>
+              <div class="col-lg-3 col-md-4 col-sm-6 my-2"><div class="card" style="width: 100%;">
+                <img src="https://images.pexels.com/photos/985635/pexels-photo-985635.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Product 1</h5>
+                  <p class="card-text" style="font-size: 16px !important;">This image represents product 1 at London Mall.</p>
+                  <a href="#" class="btn btn-success" style="font-size: 14px !important;
+                  line-height: 25.5px !important;
+                  padding: 5px 15px !important;
+                  background: #19875420;
+                  color: #198754;
+                  font-weight: bold;">Add to cart <i style="    margin-left: 5px;
+font-size: 12px;" class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div></div>
+              <div class="col-lg-3 col-md-4 col-sm-6 my-2"><div class="card" style="width: 100%;">
+                <img src="https://images.pexels.com/photos/985635/pexels-photo-985635.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Product 1</h5>
+                  <p class="card-text" style="font-size: 16px !important;">This image represents product 1 at London Mall.</p>
+                  <a href="#" class="btn btn-success" style="font-size: 14px !important;
+                  line-height: 25.5px !important;
+                  padding: 5px 15px !important;
+                  background: #19875420;
+                  color: #198754;
+                  font-weight: bold;">Add to cart <i style="    margin-left: 5px;
+font-size: 12px;" class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div></div>
+
+            </div>
+            <div class="row my-3">  
+              <div class="col-lg-3 col-md-4 col-sm-6 my-2"><div class="card" style="width: 100%;">
+                <img src="https://images.pexels.com/photos/985635/pexels-photo-985635.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Product 1</h5>
+                  <p class="card-text" style="font-size: 16px !important;">This image represents product 1 at London Mall.</p>
+                  <a href="#" class="btn btn-success" style="font-size: 14px !important;
+                  line-height: 25.5px !important;
+                  padding: 5px 15px !important;
+                  background: #19875420;
+                  color: #198754;
+                  font-weight: bold;">Add to cart <i style="    margin-left: 5px;
+font-size: 12px;" class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div></div>
+              <div class="col-lg-3 col-md-4 col-sm-6 my-2"><div class="card" style="width: 100%;">
+                <img src="https://images.pexels.com/photos/1488507/pexels-photo-1488507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Product 1</h5>
+                  <p class="card-text" style="font-size: 16px !important;">This image represents product 1 at London Mall.</p>
+                  <a href="#" class="btn btn-success" style="font-size: 14px !important;
+                  line-height: 25.5px !important;
+                  padding: 5px 15px !important;
+                  background: #19875420;
+                  color: #198754;
+                  font-weight: bold;">Add to cart <i style="    margin-left: 5px;
+font-size: 12px;" class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div></div>
+              <div class="col-lg-3 col-md-4 col-sm-6 my-2"><div class="card" style="width: 100%;">
+                <img src="https://images.pexels.com/photos/985635/pexels-photo-985635.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Product 1</h5>
+                  <p class="card-text" style="font-size: 16px !important;">This image represents product 1 at London Mall.</p>
+                  <a href="#" class="btn btn-success" style="font-size: 14px !important;
+                  line-height: 25.5px !important;
+                  padding: 5px 15px !important;
+                  background: #19875420;
+                  color: #198754;
+                  font-weight: bold;">Add to cart <i style="    margin-left: 5px;
+font-size: 12px;" class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div></div>
+              <div class="col-lg-3 col-md-4 col-sm-6 my-2"><div class="card" style="width: 100%;">
+                <img src="https://images.pexels.com/photos/985635/pexels-photo-985635.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Product 1</h5>
+                  <p class="card-text" style="font-size: 16px !important;">This image represents product 1 at London Mall.</p>
+                  <a href="#" class="btn btn-success" style="font-size: 14px !important;
+                  line-height: 25.5px !important;
+                  padding: 5px 15px !important;
+                  background: #19875420;
+                  color: #198754;
+                  font-weight: bold;">Add to cart <i style="    margin-left: 5px;
+font-size: 12px;" class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div></div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- Kids portions ends -->
+    </div>
                 </div>
               </div>
             </div>
@@ -243,8 +608,11 @@
         </div>
       </div>
 
-
+      <footer class="text-center my-3">
+        Copyright @mallbynoor 2024
+      </footer>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
